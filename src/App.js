@@ -5,11 +5,12 @@ import Movies from './Components/Movies';
 import Heading from './Components/Heading';
 import Search from './Components/Search';
 import Nominate from './Components/Nominate';
-
+import RemoveNomination from './Components/RemoveNomination';
 
 function App() {
   const [movies, setMovies] = useState([]);
-  const [searchText, setSearchText] = useState('')
+  const [nominations, setNominations] = useState([]);
+  const [searchText, setSearchText] = useState('');
 
   const getMovieRequest = async (searchText) => {
     const url = `http://www.omdbapi.com/?s=${searchText}&apikey=d1684ae3`
@@ -26,6 +27,11 @@ function App() {
     getMovieRequest(searchText);
   }, [searchText])
 
+  const addNomination = (movie) => {
+    const nominationsList = [...nominations, movie];
+    setNominations(nominationsList)
+  }
+
   return (
     <div className='container-fluid movie-app'>
       <div className='row d-flex align-items-center mt-4 mb-4'>
@@ -33,7 +39,13 @@ function App() {
         <Search searchText={searchText} setSearchText={setSearchText}/>
       </div>
       <div className="row">
-        <Movies movies={movies} nominate={Nominate}/>
+        <Movies movies={movies} nominate={Nominate} handleNominationClick={addNomination}/>
+      </div>
+      <div className='row d-flex align-items-center mt-4 mb-4'>
+        <Heading heading="Nominations"/>
+      </div>
+      <div className="row">
+        <Movies movies={nominations} nominate={RemoveNomination} handleNominationClick={addNomination}/>
       </div>
     </div>
   );
