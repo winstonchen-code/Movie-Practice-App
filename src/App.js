@@ -4,6 +4,7 @@ import './App.css';
 import Movies from './Components/Movies';
 import Heading from './Components/Heading';
 import Search from './Components/Search';
+import Nominate from './Components/Nominate';
 
 
 function App() {
@@ -32,7 +33,7 @@ function App() {
         <Search searchText={searchText} setSearchText={setSearchText}/>
       </div>
       <div className="row">
-        <Movies movies={movies}/>
+        <Movies movies={movies} nominate={Nominate}/>
       </div>
     </div>
   );
