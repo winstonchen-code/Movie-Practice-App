@@ -27,9 +27,19 @@ function App() {
     getMovieRequest(searchText);
   }, [searchText])
 
+  useEffect(()=>{
+    const movieNominations = JSON.parse(localStorage.getItem('react-movie-nominations'));
+    setNominations(movieNominations);
+  }, []);
+
+  const saveToLocalStorage = (items) => {
+    localStorage.setItem('react-movie-nominations', JSON.stringify(items))
+  }
+
   const addNomination = (movie) => {
     const nominationsList = [...nominations, movie];
     setNominations(nominationsList)
+    saveToLocalStorage(nominationsList)
   }
 
   const removeNomination = (movie) => {
