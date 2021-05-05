@@ -1,40 +1,29 @@
-UX Developer Intern & Web Developer Intern Challenge - Fall 2021
-The Shoppies: Movie awards for entrepreneurs
+# The Shoppies Application
 
-Shopify has branched out into movie award shows and we need your help. Please build us an app to help manage our movie nominations for the upcoming Shoppies.
+## PREVIEW
 
-The Challenge
+<img width="1879" alt="preview" src="https://user-images.githubusercontent.com/72679784/115167177-84daef80-a084-11eb-9884-12544305c4f9.png">
 
-We need a webpage that can search OMDB for movies, and allow the user to save their favourite films they feel should be up for nomination. When they've selected 5 nominees they should be notified they're finished.
+## INSPIRATION
 
-We'd like a simple to use interface that makes it easy to:
-Search OMDB and display the results (movies only)
-Add a movie from the search results to our nomination list
-View the list of films already nominated
-Remove a nominee from the nomination list
+After 12 months where the world has faced a tsunami of suffering, the arrival of COVID-19 vaccines represents some light at the end of the tunnel. However, there has still been a surge in COVID-19 recently with people taking less precautions to protect themselves from the virus. As a result, I wanted to create an easy to use application that can keep people aware of the number of cases in specific areas. This will keep the public aware of the ongoing pandemic and not lose sight of protecting the people around them.
 
-Technical requirements
-Search results should come from OMDB's API (free API key: http://www.omdbapi.com/apikey.aspx).
-Each search result should list at least its title, year of release and a button to nominate that film.
-Updates to the search terms should update the result list
-Movies in search results can be added and removed from the nomination list.
-If a search result has already been nominated, disable its nominate button.
-Display a banner when the user has 5 nominations.
+## TOOLS
 
+1. React.js
+2. Bootstrap
 
-Extras
+## WHAT IT DOES
 
-There is a lot to be improved on here, you can polish the required features by crafting a nicer design, or improve the app by adding new features! Choose something that you feel best showcases your passion and skills.
+COVID-19 Data Tracker is an online app designed to give you the latest statistics on COVID-19 based on your location.
 
-If you need inspiration, here are examples of what you can work on. If you work on these ideas, we recommend choosing only one or two.
+## WHAT'S NEXT
 
+I plan to build out more features of the application so that individuals can access articles and videos that discusses COVID-19. After adding these features, I want to promote the platform to users seeking more info on COVID-19, so that it can benefit individuals across the globe, and reduce the surge in cases. 
 
-  Save nomination lists if the user leaves the page
-  Animations for loading, adding/deleting movies, notifications
-  Create shareable links
-Submission
+## TRY IT OUT
 
-Please submit your application via “Apply Now” and make sure you include:
-  A link to your hosted code so we can test it (Free hosting available via: Github pages, Netlify and heroku)
-  A link to your Github repository containing the code
-  Any other notes you'd like us to consider alongside the page
+[DEMO](https://covid-19-statistics-info.netlify.app/)
+
+### Built by 
+* [Winston Chen](https://www.linkedin.com/in/winston-c/)
