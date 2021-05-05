@@ -28,7 +28,7 @@ function App() {
   }, [searchText])
 
   useEffect(()=>{
-    const movieNominations = JSON.parse(localStorage.getItem('react-movie-nominations'));
+    const movieNominations = JSON.parse(localStorage.getItem('react-movie-nominations')) || [];
     setNominations(movieNominations);
   }, []);
 
@@ -45,6 +45,7 @@ function App() {
   const removeNomination = (movie) => {
     const nominationsList = nominations.filter((favorite) => favorite.imdbID !== movie.imdbID)
     setNominations(nominationsList)
+    saveToLocalStorage(nominationsList)
   }
 
   return (

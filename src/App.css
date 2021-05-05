@@ -1,6 +1,7 @@
 body {
   background: #FBF7ED;
   color: green;
+  z-index: -10;
 }
 
 .movie-app > .row {
