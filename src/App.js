@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css';
 import Movies from './Components/Movies';
+
 
 function App() {
   const [movies, setMovies] = useState([
@@ -40,9 +42,16 @@ function App() {
         "Poster": "https://m.media-amazon.com/images/M/MV5BYWE1NTdjOWQtYTQ2Ny00Nzc5LWExYzMtNmRlOThmOTE2N2I4XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_SX300.jpg"
     },
   ]);
+
+  const getMovieRequest = () => {
+    const url = "http://www.omdbapi.com/?s=avengers&apikey=d1684ae3"
+  }
+
   return (
-    <div>
-      <Movies movies={movies}/>
+    <div className='container-fluid movie-app'>
+      <div className="row">
+        <Movies movies={movies}/>
+      </div>
     </div>
   );
 }
