@@ -32,6 +32,11 @@ function App() {
     setNominations(nominationsList)
   }
 
+  const removeNomination = (movie) => {
+    const nominationsList = nominations.filter((favorite) => favorite.imdbID !== movie.imdbID)
+    setNominations(nominationsList)
+  }
+
   return (
     <div className='container-fluid movie-app'>
       <div className='row d-flex align-items-center mt-4 mb-4'>
@@ -45,7 +50,7 @@ function App() {
         <Heading heading="Nominations"/>
       </div>
       <div className="row">
-        <Movies movies={nominations} nominate={RemoveNomination} handleNominationClick={addNomination}/>
+        <Movies movies={nominations} nominate={RemoveNomination} handleNominationClick={removeNomination}/>
       </div>
     </div>
   );
