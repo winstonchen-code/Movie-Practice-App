@@ -128,7 +128,8 @@ header .nav-links li:last-child {
 
 .add-content .input-wrapper input {
   width: 100%;
-  background-color: var(--primary);
+  /* background-color: var(--primary); */
+  background-color: green;
   padding: 10px;
   border-radius: 5px;
   border: none;
