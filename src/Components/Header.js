@@ -5,7 +5,7 @@ function Header() {
     return (
         <header>
             <div className="container">
-                <div className="inner-context">
+                <div className="inner-content">
                     <div className="brand">
                         <Link to="/">The Shoppies</Link>
                     </div>
