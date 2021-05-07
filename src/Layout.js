@@ -50,7 +50,8 @@ function Layout() {
 
   return (
     <div className='container-fluid movie-app'>
-      <div className='row d-flex align-items-center mt-4 mb-4'>
+      <div>
+      {/* <div className='row d-flex align-items-center mt-4 mb-4'> */}
         {/* <Heading heading="The Shoppies"/> */}
         <Search searchText={searchText} setSearchText={setSearchText}/>
       </div>
