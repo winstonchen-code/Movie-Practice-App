@@ -4,14 +4,26 @@ function Movies(props) {
     const Nominate = props.nominate;
     return (
         <>
-            {props.movies.map((movie, index) => 
-            <div className="image-container d-flex justify-content-start m-3">
-                <img src={movie.Poster} alt="movie"></img>
-                <div onClick={() => props.handleNominationClick(movie)} className="overlay d-flex align-items-center justify-content-center">
-                    <Nominate/>
+        <div className="add-page">
+            <div className="container">
+                <div className="add-movie">
+                {props.movies.map((movie, index) => 
+                    <ul className="results">
+                        <div className="result-card">
+                            <div className="poster-wrapper">
+                                <li>
+                                    <img src={movie.Poster} alt="movie"></img>
+                                    <div onClick={() => props.handleNominationClick(movie)}>
+                                        <Nominate/>
+                                    </div>
+                                </li>
+                            </div>
+                        </div>
+                    </ul>
+                )}
                 </div>
             </div>
-            )}
+        </div>
         </>
     )
 }

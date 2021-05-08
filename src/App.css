@@ -74,7 +74,7 @@ input:focus {
 
 /* Header Styles */
 header {
-  /* background-color: var(--primary); */
+  position: fixed;
   background: #FBF7ED;
 }
 
@@ -86,7 +86,6 @@ header .inner-content {
 }
 
 header a {
-  /* color: var(--white); */
   color: green;
   font-size: 1.25rem;
   text-decoration: none;
@@ -121,7 +120,15 @@ header .nav-links li:last-child {
 
 /* Add Page */
 .add-content {
+  position: sticky;
   padding: 50px 0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.add-movie {
+  position: sticky;
+  padding: 0 0;
   max-width: 600px;
   margin: 0 auto;
 }
@@ -139,7 +146,6 @@ header .nav-links li:last-child {
 .results {
   padding: 0;
   margin: 0;
-  margin-top: 20px;
 }
 
 .results li {
