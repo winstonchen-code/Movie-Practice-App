@@ -4,6 +4,23 @@ import Movies from './Components/Movies';
 import Search from './Components/Search';
 import Nominate from './Components/Nominate';
 import RemoveNomination from './Components/RemoveNomination';
+import styled from 'styled-components'
+
+const Container = styled.div`
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+`
+const ColumnLeft = styled.div`
+    order: ${({reverse}) => (reverse? '2' : '1')};
+`
+
+const ColumnRight = styled.div`
+    padding: 2rem;
+    order: ${({reverse}) => (reverse? '1' : '2')};
+    display: relative;
+    justify-content: center;
+    background-color: white;
+`
 
 function Layout() {
   const [movies, setMovies] = useState([]);
@@ -48,15 +65,21 @@ function Layout() {
 
   return (
     <>
-      <div>
-        <Search searchText={searchText} setSearchText={setSearchText}/>
-      </div>
-      <div>
-        <Movies movies={movies} nominate={Nominate} handleNominationClick={addNomination}/>
-      </div>
-      <div>
-        <Movies movies={nominations} nominate={RemoveNomination} handleNominationClick={removeNomination}/>
-      </div>
+      <Container>
+        <ColumnLeft>
+          <div>
+            <Search searchText={searchText} setSearchText={setSearchText}/>
+          </div>
+          <div>
+            <Movies movies={movies} nominate={Nominate} handleNominationClick={addNomination}/>
+          </div>
+        </ColumnLeft>
+        <ColumnRight>
+          <div>
+            <Movies movies={nominations} nominate={RemoveNomination} handleNominationClick={removeNomination}/>
+          </div>
+        </ColumnRight>
+      </Container>
     </>
   );
 }
