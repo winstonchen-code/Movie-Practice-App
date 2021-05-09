@@ -5,6 +5,7 @@ import Search from './Components/Search';
 import Nominate from './Components/Nominate';
 import RemoveNomination from './Components/RemoveNomination';
 import styled from 'styled-components'
+import Footer from './Components/Footer';
 
 const Container = styled.div`
     display: grid;
@@ -76,10 +77,12 @@ function Layout() {
         </ColumnLeft>
         <ColumnRight>
           <div>
+            <h1>Nominations</h1>
             <Movies movies={nominations} nominate={RemoveNomination} handleNominationClick={removeNomination}/>
           </div>
         </ColumnRight>
       </Container>
+      <Footer/>
     </>
   );
 }

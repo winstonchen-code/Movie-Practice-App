@@ -334,3 +334,23 @@ body {
   padding: 20px;
   text-align: center;
 }
+
+/*
+===============
+Footer
+===============
+*/
+
+.footer {
+  height: 9rem;
+  background: black;
+  text-align: center;
+  display: grid;
+  place-items: center;
+}
+.footer h1 {
+  margin-top: 0.5rem;
+  color: white;
+  font-weight: normal;
+  text-transform: uppercase;
+}
