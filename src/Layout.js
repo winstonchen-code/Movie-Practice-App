@@ -10,9 +10,11 @@ import Footer from './Components/Footer';
 const Container = styled.div`
     display: grid;
     grid-template-columns: 5fr 1fr;
+    height: 60rem;
 `
 const ColumnLeft = styled.div`
     order: ${({reverse}) => (reverse? '2' : '1')};
+    height: 60rem;
 `
 
 const ColumnRight = styled.div`
@@ -21,6 +23,7 @@ const ColumnRight = styled.div`
     display: relative;
     justify-content: center;
     background-color: white;
+    height: 60rem;
 `
 
 function Layout() {
@@ -72,7 +75,7 @@ function Layout() {
             <Search searchText={searchText} setSearchText={setSearchText}/>
           </div>
           <div>
-            <Movies movies={movies} nominate={Nominate} handleNominationClick={addNomination}/>
+            <Movies movies={movies} nominations={nominations} nominate={Nominate} handleNominationClick={addNomination}/>
           </div>
         </ColumnLeft>
         <ColumnRight>

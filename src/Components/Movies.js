@@ -3,6 +3,7 @@ import React from 'react'
 function Movies(props) {
     console.log(props)
     const Nominate = props.nominate;
+    
     return (
         <>
         <div className="add-page">
@@ -25,7 +26,7 @@ function Movies(props) {
                                     </h4>
                                 </div>
                                 <div className="controls">
-                                    <button disabled={true} className="btn" onClick={() => props.handleNominationClick(movie)}>
+                                    <button className="btn" onClick={() => props.handleNominationClick(movie)}>
                                         <Nominate/>
                                     </button>
                                 </div>

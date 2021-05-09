@@ -6,7 +6,7 @@ function Search(props) {
             <div className="container">
                 <div className="add-content">
                     <div className="input-wrapper">
-                        <input type="text" value={props.value} onChange={(event)=> props.setSearchText(event.target.value)} placeholder="Search"></input>
+                        <input type="text" value={props.value} onChange={(event)=> props.setSearchText(event.target.value)} placeholder="Search Movie Title"></input>
                     </div>
                 </div>
             </div>

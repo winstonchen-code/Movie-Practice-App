@@ -4,7 +4,7 @@ function RemoveNomination() {
     return (
         <>
         <span className="mr-2">
-            Remove Nomination
+            Remove
         </span>
         </>
     )
