@@ -14,9 +14,6 @@ function Movies(props) {
                             <div className="poster-wrapper">
                                 <li>
                                     <img src={movie.Poster} alt="movie"></img>
-                                    {/* <div onClick={() => props.handleNominationClick(movie)}>
-                                        <Nominate/>
-                                    </div> */}
                                 </li>
                             </div>
 
@@ -28,13 +25,11 @@ function Movies(props) {
                                     </h4>
                                 </div>
                                 <div className="controls">
-                                    <button className="btn" onClick={() => props.handleNominationClick(movie)}>
+                                    <button disabled={true} className="btn" onClick={() => props.handleNominationClick(movie)}>
                                         <Nominate/>
                                     </button>
                                 </div>
                             </div>
-
-                            
                         </div>
                     </ul>
                 )}
