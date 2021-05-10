@@ -32,7 +32,7 @@ function Layout() {
   const [searchText, setSearchText] = useState('');
 
   const getMovieRequest = async (searchText) => {
-    const url = `http://www.omdbapi.com/?s=${searchText}&apikey=d1684ae3`
+    const url = ``
 
     const response = await fetch(url);
     const responseJSON = await response.json();
